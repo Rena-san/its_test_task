@@ -1,0 +1,41 @@
+pipeline {
+    agent any
+    stages {
+        stage('Checkout project') {
+            steps {
+                script {
+                    git branch: "main",
+                        credentialsId: 'DESKTOP-0IPILK4$',
+                        url: 'https://github.com/Rena-san/training_jenkins'
+                }
+            }
+        }
+
+        stage('Setup') {
+            steps {
+                sh "python -m venv venv"
+                sh """
+                    source venv/Scripts/activate
+                    pip install -r requirements.txt
+                """
+
+            }
+        }
+        stage('Run Tests') {
+            steps {
+                sh """
+                    source venv/Scripts/activate
+                    pytest
+                """
+            }
+        }
+
+
+    }
+
+     post {
+            always {
+                archiveArtifacts artifacts: 'scr.png', fingerprint: true
+            }
+        }
+}

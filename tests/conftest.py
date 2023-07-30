@@ -30,9 +30,9 @@ def cmdopt(request):
 
     #prints test run statistic in terminal
 
-# def pytest_sessionfinish(session, exitstatus):
-#     reporter = session.config.pluginmanager.get_plugin('terminalreporter')
-#     passed = len(reporter.stats['passed'])
-#     failed = len(reporter.stats['failed'])
-#     total = passed + failed
-#     print(f'passed:{passed}, failed: {failed}, total: {total}')
+def pytest_sessionfinish(session, exitstatus):
+    reporter = session.config.pluginmanager.get_plugin('terminalreporter')
+    passed = len(reporter.stats['passed'])
+    failed = len(reporter.stats['failed'])
+    total = passed + failed
+    print(f'passed:{passed}, failed: {failed}, total: {total}')

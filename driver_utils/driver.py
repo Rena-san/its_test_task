@@ -31,7 +31,7 @@ class Driver(metaclass=Singleton):
 
     def get_screenshot(self):
         self.driver.save_screenshot(
-            'D:\\\\ITS_PROJECT_TEST_TASK\\\\appium\\\\test_task\\\\its_test_task\\\\tests\\\\screens\\\\scr.png')
+            'D:\\\\ITS_PROJECT_TEST_TASK\\\\appium\\\\test_task\\\\its_test_task\\\\scr.png')
 
     @staticmethod
     def press_home_btn():
