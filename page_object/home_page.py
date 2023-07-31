@@ -8,14 +8,14 @@ class HomePage:
     """
     Method`s (actions) of home screen.
     """
-    PAGE_TAG = '//android.widget.TextView[@content-desc="Phone"]'
-    GOOGLE_SEARCH = 'com.android.quicksearchbox:id/search_src_text'
-    SEARCH_WIDJET = 'com.android.quicksearchbox:id/search_widget_text'
     CALC_APP = '//android.widget.TextView[@content-desc="Calculator"]'
+    SEARCH_WIDJET = '//*[contains(@content-desc,"earch")]'
+
+    GOOGLE_SEARCH = '//*[contains(@class, "android.widget.EditText")]'
 
     def send_text_to_google_search(self, text):
-        Button(MobileBy.ID, self.SEARCH_WIDJET, "search_bar").tap()
-        Input(MobileBy.ID, self.GOOGLE_SEARCH, "google").send_text(text)
+        Button(MobileBy.XPATH, self.SEARCH_WIDJET, "search_bar").tap()
+        Input(MobileBy.XPATH, self.GOOGLE_SEARCH, "google").send_text(text)
 
     def press_calc_app(self):
         Button(MobileBy.XPATH, self.CALC_APP, "calc_app").tap()

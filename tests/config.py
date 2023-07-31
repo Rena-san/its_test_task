@@ -2,8 +2,6 @@ import os
 
 from utils.get_args import get_args
 
-DIR_PATH = os.path.dirname(os.path.realpath(__file__))
-
 
 class Config:
     """
@@ -18,12 +16,13 @@ class Config:
     }
 
     CAPABILITIES_DEVICE = {
-        "deviceName": "R52MA1AZXWH",
+        "deviceName": "Samsung Tab",
         "platformName": "Android",
+        "platformVersion": "12.0"
     }
 
     PRESS_HOME_BTN_KEY_EVENT_CODE = 3
-    PATH_SAVE_SCREENSHOTS = f'{DIR_PATH}'
+    PATH_SAVE_SCREENSHOTS = os.path.dirname(os.path.realpath(__file__))
     WAITS = 3
 
     @staticmethod
@@ -33,7 +32,7 @@ class Config:
             return Config.CAPABILITIES_EMULATOR
         if deviceName['deviceName'] == 'emulator':
             return Config.CAPABILITIES_EMULATOR
-        if deviceName['deviceName'] == 'sams_tab':
+        if deviceName['deviceName'] == 'real':
             return Config.CAPABILITIES_DEVICE
         else:
             raise Exception(f'{deviceName} is not a support device')

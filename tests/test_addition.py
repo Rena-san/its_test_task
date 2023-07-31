@@ -1,11 +1,8 @@
-from time import sleep
-
 import pytest
 
 from driver_utils.driver import Driver
 from page_object.calculator_page import CalculatorPage
 from page_object.home_page import HomePage
-from tests.calc_btn_coord_parser import calc_btn_coord
 
 
 @pytest.mark.parametrize("nums", ([1, 2], [3, 4]))
@@ -20,7 +17,6 @@ class TestCase:
         home_page = HomePage()
         home_page.press_calc_app()
         calculator = CalculatorPage()
-        sleep(1)
         calculator.add_two_positive_nums(*nums)
         s = calculator.get_result()
         assert s == f'{sum(nums)}', "Wrong result"

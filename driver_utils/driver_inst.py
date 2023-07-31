@@ -1,4 +1,5 @@
 from appium import webdriver
+
 from tests.config import Config
 
 

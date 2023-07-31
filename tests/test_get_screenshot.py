@@ -5,7 +5,7 @@ from driver_utils.driver import Driver
 from page_object.home_page import HomePage
 
 
-@allure.feature("send_result")
+@allure.feature("Get screenshot")
 @pytest.mark.usefixtures("set_up")
 class TestCase:
     """

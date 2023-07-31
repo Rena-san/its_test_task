@@ -16,20 +16,5 @@ def pytest_addoption(parser):
     parser.addoption(
         '--deviceName',
         action="store",
-        help="The kind of mobile device or emulator to use: Real Device, Android Emulator"
+        help="Real Device or Android Emulator"
     )
-
-
-@pytest.fixture
-def cmdopt(request):
-    return request.calc_btn_coord.getoption("--deviceName")
-
-    # prints test run statistic in terminal
-    ## It was my try to take logs from pytest.
-
-# def pytest_sessionfinish(session, exitstatus):
-#     reporter = session.config.pluginmanager.get_plugin('terminalreporter')
-#     passed = len(reporter.stats['passed'])
-#     failed = len(reporter.stats['failed'])
-#     total = passed + failed
-#     print(f'passed:{passed}, failed: {failed}, total: {total}')
