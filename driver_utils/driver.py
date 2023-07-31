@@ -19,7 +19,7 @@ class Driver(metaclass=Singleton):
 
     def get_screenshot(self):
         self.driver.save_screenshot(
-            f'{Config.PATH_SAVE_SCREENSHOTS}/scr.png'
+            f'{Config.PATH_SAVE_SCREENSHOTS}/screenshot.png'
         )
 
     @staticmethod

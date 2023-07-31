@@ -23,7 +23,7 @@ class Config:
     }
 
     PRESS_HOME_BTN_KEY_EVENT_CODE = 3
-    PATH_SAVE_SCREENSHOTS = f'{DIR_PATH}/screenshots'
+    PATH_SAVE_SCREENSHOTS = f'{DIR_PATH}'
     WAITS = 3
 
     @staticmethod
