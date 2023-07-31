@@ -6,7 +6,7 @@ pipeline {
                 script {
                     git branch: "main",
                         credentialsId: 'DESKTOP-0IPILK4$',
-                        url: 'https://github.com/Rena-san/training_jenkins'
+                        url: 'https://github.com/Rena-san/its_test_task'
                 }
             }
         }
