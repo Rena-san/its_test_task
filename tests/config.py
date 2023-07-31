@@ -2,6 +2,8 @@ import os
 
 from utils.get_args import get_args
 
+DIR_PATH = os.path.dirname(os.path.realpath(__file__))
+
 
 class Config:
     """
@@ -20,7 +22,9 @@ class Config:
         "platformName": "Android",
     }
 
-
+    PRESS_HOME_BTN_KEY_EVENT_CODE = 3
+    PATH_SAVE_SCREENSHOTS = f'{DIR_PATH}/screenshots'
+    WAITS = 3
 
     @staticmethod
     def get_capabilities():

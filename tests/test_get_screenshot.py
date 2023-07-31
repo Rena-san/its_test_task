@@ -2,15 +2,17 @@ import allure
 import pytest
 
 from driver_utils.driver import Driver
-# from time import sleep
-from page_object.android_page import AndroidPage
+from page_object.home_page import HomePage
 
 
 @allure.feature("send_result")
 @pytest.mark.usefixtures("set_up")
 class TestCase:
+    """
+    Get screenshot
+    """
     def test_get_screenshot(self):
-        home_page = AndroidPage()
+        home_page = HomePage()
         Driver().press_home_btn()
 
         home_page.send_text_to_google_search(

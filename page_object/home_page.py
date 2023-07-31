@@ -1,16 +1,10 @@
-import os
-from time import sleep
-
 from appium.webdriver.common.mobileby import MobileBy
 
-from driver_utils.driver import Driver
 from page_object.element.button import Button
 from page_object.element.input import Input
-# from subprocess import Popen, PIPE
-from tests.config_parser import config
 
 
-class AndroidPage:
+class HomePage:
     """
     Method`s (actions) of home screen.
     """
@@ -21,8 +15,6 @@ class AndroidPage:
 
     def send_text_to_google_search(self, text):
         Button(MobileBy.ID, self.SEARCH_WIDJET, "search_bar").tap()
-        sleep(3)
-
         Input(MobileBy.ID, self.GOOGLE_SEARCH, "google").send_text(text)
 
     def press_calc_app(self):

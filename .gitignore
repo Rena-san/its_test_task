@@ -140,3 +140,4 @@ dmypy.json
 ../task6
 /tests/my_allure_results/
 /tests/screens/
+/tests/screenshots/

@@ -1,11 +1,11 @@
 import json
 import os
 
-CONFIG_PATH = '/config.json'
+CONFIG_PATH = '/calculator_btn_coord.json'
 DIR_PATH = os.path.dirname(os.path.realpath(__file__))
 
 
-def config():
+def calc_btn_coord():
     """
     returns calculator button coordinate dictionary
     """
