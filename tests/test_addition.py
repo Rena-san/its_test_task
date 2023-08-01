@@ -18,8 +18,8 @@ class TestCase:
         home_page.press_calc_app()
         calculator = CalculatorPage()
         calculator.add_two_positive_nums(*nums)
-        s = calculator.get_result()
-        assert s == f'{sum(nums)}', "Wrong result"
+        result = calculator.get_result()
+        assert result == f'{sum(nums)}', "Wrong result"
         Driver().press_home_btn()
 
 

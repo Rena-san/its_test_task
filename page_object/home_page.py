@@ -6,10 +6,11 @@ from page_object.element.input import Input
 
 class HomePage:
     """
-    Method`s (actions) of home screen.
+    Methods (actions) of home screen.
     """
     CALC_APP = '//android.widget.TextView[@content-desc="Calculator"]'
-    SEARCH_WIDJET = '//*[contains(@content-desc,"earch")]'
+    SEARCH_WIDJET = '//*[contains(@content-desc,"search") or \
+                        contains(@content-desc,"Search")]'
 
     GOOGLE_SEARCH = '//*[contains(@class, "android.widget.EditText")]'
 

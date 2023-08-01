@@ -21,5 +21,5 @@ class TestCase:
         home_page.press_calc_app()
         calculator = CalculatorPage()
         calculator.addition_positive_num_tap_with_keyevent(*nums)
-        s = calculator.get_result()
-        assert s == '5', "Wrong result"
+        result = calculator.get_result()
+        assert result == '5', "Wrong result"

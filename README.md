@@ -8,11 +8,13 @@
 3. Allure command-line 
 > https://docs.qameta.io/allure/#_installing_a_commandline
 4. Google Calculator App
+> https://play.google.com/store/apps/details?id=com.google.android.calculator&hl=en_US
 
 ## Set up 1:
 1. Run Android Studio, create an emulator or plug real device and install Calculator App.
-   1.1. Android OS 11/12. 
-2. Add your device capabilities to tests/config.py and Appium.
+   1.1. Android Emulator Pixel 6 Pro (API30), Android OS 11 (R).
+   1.2. Samsung Galaxy Tab, Android 12.
+2. Add your device capabilities to tests/config.py.
 3. Run Appium.
 
 ## Set up 2:
