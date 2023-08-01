@@ -25,7 +25,7 @@
 3. Install requirements:
 > pip install -r requirements
 
-###Run tests with pytest and save allure log:
+### Run tests with pytest and save allure log:
 *Default device is an emulator.
 1. Run all tests on the emulator:
 > pytest  --alluredir=/tmp/my_allure_results
@@ -36,7 +36,7 @@
 > pytest tests/<test_name> --deviceName=<device_name> --alluredir=/tmp/my_allure_results
 >>pytest tests/tests_addition.py --deviceName=emulator --alluredir=/tmp/my_allure_results
 
-###Run tests with bash and get allure report:
+### Run tests with bash and get allure report:
 1. Show all test`s names
 >sh test_run.sh 
 2. Choose the device (emulator/real) for running all tests
