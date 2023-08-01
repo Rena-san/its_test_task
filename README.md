@@ -1,4 +1,4 @@
-#Testing addition operations for numbers 0...9.
+# Testing addition operations for numbers 0...9.
 
 ## Set up 0:
 1. Android Studio
